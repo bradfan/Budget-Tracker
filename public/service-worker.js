@@ -68,17 +68,21 @@ self.addEventListener("fetch", function (evt) {
     );
 
     return;
+    // will end function after all new requests are dealt with
   }
-// will end function after all new requests are dealt with
+
 
 // below is part of class repo.
+
   // if the request is not for the API, serve static assets using "offline-first" approach.
   // see https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook#cache-falling-back-to-network
 
   // default for html requests, not part of if "api" routes and non "api" routes will behave as usual.
-  evt.respondWith(
-    caches.match(evt.request).then(function (response) {
-      return response || fetch(evt.request);
-    })
-  );
+
+  // below is part of original c/p - probably unneccesary and messed with my code.
+  // evt.respondWith(
+  //   caches.match(evt.request).then(function (response) {
+  //     return response || fetch(evt.request);
+  //   })
+  // );
 });
