@@ -58,7 +58,9 @@ function checkDatabase() {
           "Content-Type": "application/json",
         },
       })
-        .then((response) => response.json())
+        .then(response => {
+          return response.json();
+        }) 
         .then((res) => {
           // If our returned response is not empty
           if (res.length !== 0) {
