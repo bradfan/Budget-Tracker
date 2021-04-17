@@ -7,6 +7,7 @@ const FILES_TO_CACHE = [
   "/icons/icon-512x512.png",
   "/manifest.json",
   "/indexdb.js"
+  // everything from public folder goes in here
 ];
 
 const CACHE_NAME = "static-cache-v2";
