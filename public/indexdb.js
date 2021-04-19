@@ -65,7 +65,7 @@ function checkDatabase() {
           // If our returned response is not empty
           if (res.length !== 0) {
             // Open another transaction to BudgetStore with the ability to read and write
-            transaction = db.transaction(["pending"], "readwrite");
+            let transaction = db.transaction(["pending"], "readwrite");
             // console error on line 68: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_const_assignment
             // Assign the current store to a variable
             const currentStore = transaction.objectStore("pending");
