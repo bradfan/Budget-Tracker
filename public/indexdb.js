@@ -6,7 +6,7 @@ const indexedDB = window.indexedDB;
 const request = indexedDB.open("budget", 1);
 
 request.onupgradeneeded = ({ target }) => {
-   let db = target.result;
+  let db = target.result;
   db.createObjectStore("pending", { autoIncrenment: true });
 };
 request.onsuccess = ({ target }) => {
@@ -58,9 +58,9 @@ function checkDatabase() {
           "Content-Type": "application/json",
         },
       })
-        .then(response => {
+        .then((response) => {
           return response.json();
-        }) 
+        })
         .then((res) => {
           // If our returned response is not empty
           if (res.length !== 0) {
