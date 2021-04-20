@@ -2,7 +2,7 @@
 
 Github Repo link: https://github.com/bradfan/Budget-Tracker
 
-Deployed Heroku Link: 
+Deployed Heroku Link: https://finance-budget-tracker.herokuapp.com/
 
 This Budget Tracker application allows the user to be able to track their withdrawals and deposits with or without a data/internet connection so that their account balance is accurate when they are traveling
 
